@@ -8,6 +8,11 @@ class AnimeSearchController extends Controller
 {
     public function showForm()
     {
-        return view('pages.search-form');
+        return view('anime.search-form');
+    }
+
+    public function search()
+    {
+        return view('anime.search');
     }
 }
