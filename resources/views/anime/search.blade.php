@@ -18,13 +18,10 @@
             <div class="text-center">
 
                 <ul>
-
-                    @foreach ($data['result'] as $result)
-                        @if ($result['similarity'] > 0)
-                            <li class="mb-10">
-                                <x-anime.anime-card :result="$result" />
-                            </li>
-                        @endif
+                    @foreach ($sortedAnimeResults as $anime)
+                        <li class="mb-20">
+                            <x-anime.anime-card :anime="$anime" />
+                        </li>
                     @endforeach
 
                 </ul>
