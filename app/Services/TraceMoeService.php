@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use Illuminate\Http\UploadedFile;
+use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Cache;
 
@@ -12,7 +13,7 @@ class TraceMoeService
 
     public function __construct()
     {
-        $this->baseUrl = 'https://api.trace.moe/search';
+        $this->baseUrl = 'https://api.trace.moe/search?anilistInfo&cutBorders';
     }
 
     public function findAnime(UploadedFile $file)
