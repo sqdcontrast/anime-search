@@ -20,8 +20,13 @@ class AnimeSearchController extends Controller
 
         $file = $request->file('file');
 
-        $data = $traceMoeService->findAnime($file);
+        $animeResults = $traceMoeService->findAnime($file);
 
-        return view('anime.search', compact('data'));
+        $sortedAnimeResults = collect($animeResults['result'])
+            ->sortByDesc('similarity')
+            ->take(2)
+            ->toArray();
+
+        return view('anime.search', compact('sortedAnimeResults'));
     }
 }
