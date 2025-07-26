@@ -18,7 +18,7 @@
             <div class="text-center">
 
                 <ul>
-                    @foreach ($sortedAnimeResults as $anime)
+                    @foreach ($animeResults as $anime)
                         <li class="mb-20">
                             <x-anime.anime-card :anime="$anime" />
                         </li>

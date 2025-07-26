@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AnimeSearchRequest;
 use App\Services\TraceMoeService;
-use Illuminate\Http\Request;
 
 class AnimeSearchController extends Controller
 {
@@ -12,21 +12,17 @@ class AnimeSearchController extends Controller
         return view('anime.search-form');
     }
 
-    public function search(Request $request, TraceMoeService $traceMoeService)
+    public function search(AnimeSearchRequest $request, TraceMoeService $traceMoeService)
     {
-        $request->validate([
-            'file' => ['required', 'file', 'max:25600', 'mimetypes:image/*,video/*']
-        ]);
-
         $file = $request->file('file');
 
         $animeResults = $traceMoeService->findAnime($file);
 
-        $sortedAnimeResults = collect($animeResults['result'])
-            ->sortByDesc('similarity')
-            ->take(2)
-            ->toArray();
+        // $sortedAnimeResults = collect($animeResults['result'])
+        //     ->sortByDesc('similarity')
+        //     ->take(2)
+        //     ->toArray();
 
-        return view('anime.search', compact('sortedAnimeResults'));
+        return view('anime.search', compact('animeResults'));
     }
 }
