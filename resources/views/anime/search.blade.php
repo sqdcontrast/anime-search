@@ -9,22 +9,22 @@
 
         <section class="text-white py-20">
 
-            <div class="text-center mb-20">
+            <div class="text-center">
                 <h1 class="uppercase text-6xl font-bold mb-3 text-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
                     {{ __('Anime search') }}
                 </h1>
             </div>
 
-            <div class="text-center">
+            <div>
 
                 <ul>
                     @foreach ($animeResults as $anime)
-                        <li class="mb-20">
+                        <li class="py-10 border-b-4 border-neutral-700">
                             <x-anime.anime-card :anime="$anime" />
                         </li>
                     @endforeach
-
                 </ul>
+
             </div>
 
         </section>

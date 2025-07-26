@@ -1,46 +1,46 @@
-@php
-    $fromMinutes = floor($anime['from'] / 60);
-    $fromSeconds = $anime['from'] - $fromMinutes * 60;
-
-    $toMinutes = floor($anime['to'] / 60);
-    $toSeconds = $anime['to'] - $toMinutes * 60;
-@endphp
- 
 {{-- контейнер --}}
-    <div class="flex justify-between items-center py-10">
+<div class="flex justify-between px-10 gap-x-50">
 
-        {{-- левая часть --}}
-        <div class="flex flex-col items-center gap-10">
-            <h4 class="text-3xl font-bold mb-3 text-shadow-[0_0_8px_rgba(255,255,255,0.2)]">Preview</h4>
-            <div class="w-full">
-                <img class="w-full" src="{{ $anime['image'] }}" alt="{{ $anime['anilist']['title']['romaji'] }}">
-            </div>
+    {{-- левая часть --}}
+    <div class="flex flex-col flex-1/2 gap-y-10 text-center">
 
-            <div class="w-full">
-                <video width="640" height="360" controls>
-                    <source src="{{ $anime['video'] }}" type="video/mp4">
-                    Ваш браузер не поддерживает видео.
-                </video>
-            </div>
+        <h4 class="text-3xl font-bold text-shadow-[0_0_8px_rgba(255,255,255,0.2)]">Preview</h4>
 
-        </div>
-
-        {{-- правая часть --}}
         <div>
+            <img class="w-full max-w-full rounded-xl" src="{{ $anime['image'] }}" alt="{{ $anime['anilist']['title']['romaji'] }}">
+        </div>
 
-            <div class="mb-5">
-                <h3 class="text-3xl font-bold mb-3 text-shadow-[0_0_8px_rgba(255,255,255,0.5)]">{{ $anime['anilist']['title']['romaji'] }}</h3>
-                <div class="w-full">
-                    <img class="max-w-full w-full" src="{{ $anime['anilist']['coverImage']['large'] }}" alt="{{ $anime['anilist']['title']['romaji'] }}">
-                </div>
+        <div>
+            <video class="w-full rounded-xl" controls>
+                <source src="{{ $anime['video'] }}" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+
+    </div>
+
+    {{-- правая часть --}}
+    <div class="flex-1/2 text-center">
+
+        <div class="text-2xl font-semibold text-shadow-[0_0_8px_rgba(255,255,255,0.2)]">
+            <a class="text-gray-300 hover:text-white transition-colors" href="{{ $anime['anilist']['siteUrl'] }}">
+                <h3 class="text-3xl font-bold mb-2">{{ $anime['anilist']['title']['romaji'] }}</h3>
+            </a>
+            <p class="mb-5">Эпизод: {{ $anime['episode'] }}</p>
+
+            <div class="mb-3 h-1/2 overflow-hidden">
+                <img class="w-full max-w-3/4 object-cover rounded-xl mx-auto" src="{{ $anime['anilist']['coverImage']['large'] }}" alt="{{ $anime['anilist']['title']['romaji'] }}">
             </div>
 
-            <div class="text-3xl font-bold mb-3 text-shadow-[0_0_8px_rgba(255,255,255,0.2)]">
-                <p>Эпизод: {{ $anime['episode'] }}</p>
-                <p>Начало сцены {{ sprintf('%02d:%02d', $fromMinutes, $fromSeconds) }}</p>
+            <div class="text-2xl font-semibold text-shadow-[0_0_8px_rgba(255,255,255,0.2)]">
                 <p>точность совпадения {{ round($anime['similarity'] * 100) }}%</p>
-                <p><span class="text-red-500 text-shadow-[0_0_8px_rgba(239,68,68,0.5)]">18+: </span>{{ $anime['anilist']['isAdult'] ? 'Да' : 'Нет' }}</p>
+                <p>Начало сцены {{ formatTime($anime['from']) }}</p>
+                <p><span class="text-red-500 text-shadow-[0_0_8px_rgba(239,68,68,0.5)]">18+:</span> {{ $anime['anilist']['isAdult'] ? 'Да' : 'Нет' }}</p>
             </div>
 
         </div>
+
+
+
     </div>
+</div>
