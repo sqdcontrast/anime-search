@@ -29,7 +29,7 @@
         <div class="mb-10">
           <x-text>
             {{ __('Сервис использует') }}
-            <a href="https://trace.moe" target="_blank">API trace.moe</a>,
+            <a href="https://soruly.github.io/trace.moe-api/#/" class="underline text-gray-300 hover:text-white transition-colors" target="_blank">API trace.moe</a>,
             {{ __('которое использует нейросетевые алгоритмы для точного и быстрого поиска по миллионам кадров из аниме.') }}
           </x-text>
 
