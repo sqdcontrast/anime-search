@@ -7,7 +7,7 @@
 @section('content')
   <div class="container px-4 mx-auto">
 
-    <section class="text-white py-20">
+    <section class="text-white py-10">
 
       <div class="text-center mb-20">
 

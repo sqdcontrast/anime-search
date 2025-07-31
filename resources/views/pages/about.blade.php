@@ -7,16 +7,16 @@
 @section('content')
   <div class="container px-4 mx-auto">
 
-    <section class="text-white py-20">
+    <section class="text-white py-10">
 
-      <div class="text-center mb-20">
+      <div class="text-center mb-20 max-w-2/3 mx-auto">
 
-        <x-UI.heading class="mb-10">
+        <x-UI.heading class="mb-7">
           {{ __('О проекте') }}
         </x-UI.heading>
 
-        <div class="mb-10">
-          <x-UI.text>
+        <div class="mb-7">
+          <x-UI.text class="mb-7">
             {{ __('Anime Search — это удобный онлайн-сервис для распознавания аниме по изображению.') }}
           </x-UI.text>
 
@@ -26,8 +26,8 @@
         </div>
 
 
-        <div class="mb-10">
-          <x-UI.text>
+        <div class="mb-7">
+          <x-UI.text class="mb-7">
             {{ __('Сервис использует') }}
             <a href="https://soruly.github.io/trace.moe-api/#/" class="underline text-gray-300 hover:text-white transition-colors" target="_blank">API trace.moe</a>,
             {{ __('которое использует нейросетевые алгоритмы для точного и быстрого поиска по миллионам кадров из аниме.') }}
@@ -38,8 +38,8 @@
         </div>
 
 
-        <div class="mb-10">
-          <x-UI.text class="max-w-2/3 mx-auto mb-5">
+        <div class="mb-7">
+          <x-UI.text class="mb-7">
             {{ __('Anime Search идеально подходит для фанатов, блогеров и исследователей аниме-контента, помогая находить источник кадра и создавать тематический контент.') }}
           </x-UI.text>
           <x-UI.text>
@@ -48,7 +48,7 @@
         </div>
 
 
-        <div class="mb-10">
+        <div>
           <x-UI.text class="text-red-500 text-shadow-[0_0_8px_rgba(239,68,68,0.5)]">
             {{ __('Обратите внимание: некоторые результаты поиска могут содержать материалы с ограничением 18+') }}
             <br>
