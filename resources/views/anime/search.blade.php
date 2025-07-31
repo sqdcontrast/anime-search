@@ -11,9 +11,9 @@
 
       <div class="text-center mb-20">
         {{-- Heading --}}
-        <x-heading>
+        <x-UI.heading>
           {{ __('Anime search') }}
-        </x-heading>
+        </x-UI.heading>
       </div>
 
       <div>

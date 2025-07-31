@@ -12,14 +12,14 @@
       <div class="text-center mb-20">
 
         {{-- Title --}}
-        <x-heading class="mb-2">
+        <x-UI.heading class="mb-2">
           {{ __('Anime search') }}
-        </x-heading>
+        </x-UI.heading>
 
         {{-- Subtitle --}}
-        <x-subtitle>
+        <x-UI.subtitle>
           {{ __('Загрузи скриншот — покажем откуда он') }}
-        </x-subtitle>
+        </x-UI.subtitle>
 
       </div>
 
@@ -44,9 +44,9 @@
 
           <div>
             {{-- Submit button --}}
-            <x-button>
+            <x-UI.button>
               {{ __('Поиск 🔥') }}
-            </x-button>
+            </x-UI.button>
           </div>
 
         </form>
