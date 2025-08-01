@@ -9,7 +9,7 @@
 
     <section class="text-white py-10">
 
-      <div class="text-center mb-20">
+      <div class="text-center md:mb-20">
         {{-- Heading --}}
         <x-UI.heading>
           {{ __('Anime search') }}

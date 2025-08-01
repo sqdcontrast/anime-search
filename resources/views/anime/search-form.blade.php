@@ -24,7 +24,7 @@
       </div>
 
       <div class="text-center">
-        <form action="{{ route('anime.search') }}" method="POST" enctype="multipart/form-data" class="max-w-1/4 w-full mx-auto">
+        <form action="{{ route('anime.search') }}" method="POST" enctype="multipart/form-data" class="max-w-96 w-full mx-auto">
           @csrf
           <input type="file" name="file" id="file" class="hidden">
 

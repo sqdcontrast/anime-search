@@ -1,5 +1,5 @@
 {{-- контейнер --}}
-<div class="flex justify-between gap-x-50">
+<div class="flex md:flex-row flex-col justify-between gap-y-10">
 
   {{-- Reslut preview --}}
   <div class="flex flex-col flex-1/2 gap-y-10 text-center">

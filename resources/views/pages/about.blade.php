@@ -9,9 +9,9 @@
 
     <section class="text-white py-10">
 
-      <div class="text-center mb-20 max-w-2/3 mx-auto">
+      <div class="text-center mb-20 xl:max-w-2/3 mx-auto">
 
-        <x-UI.heading class="mb-7">
+        <x-UI.heading class="mb-7 md:text-6xl">
           {{ __('О проекте') }}
         </x-UI.heading>
 
