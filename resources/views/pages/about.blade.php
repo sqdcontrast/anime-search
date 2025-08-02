@@ -9,51 +9,102 @@
 
     <section class="text-white py-10">
 
-      <div class="text-center mb-20 xl:max-w-2/3 mx-auto">
+      <div class="mb-20 xl:max-w-2/3 mx-auto">
 
-        <x-UI.heading class="mb-7 md:text-6xl">
-          {{ __('О проекте') }}
-        </x-UI.heading>
+        <div class="mb-10">
 
-        <div class="mb-7">
-          <x-UI.text class="mb-7">
+          <x-UI.subtitle class="text-gray-400 text-shadow-[none] mb-2">
+            {{ __('О проекте Anime Search') }}
+          </x-UI.subtitle>
+
+          <x-UI.text>
             {{ __('Anime Search — это удобный онлайн-сервис для распознавания аниме по изображению.') }}
           </x-UI.text>
 
-          <x-UI.text>
-            {{ __('Просто загрузите кадр, и мы подскажем, из какого он аниме, когда он появляется в эпизоде и многое другое.') }}
-          </x-UI.text>
         </div>
 
+        <div class="mb-10">
 
-        <div class="mb-7">
-          <x-UI.text class="mb-7">
-            {{ __('Сервис использует') }}
-            <a href="https://soruly.github.io/trace.moe-api/#/" class="underline text-gray-300 hover:text-white transition-colors" target="_blank">API trace.moe</a>,
-            {{ __('которое использует нейросетевые алгоритмы для точного и быстрого поиска по миллионам кадров из аниме.') }}
+          <x-UI.subtitle class="text-gray-400 text-shadow-[none] mb-2">
+            {{ __('Описание') }}
+          </x-UI.subtitle>
+
+          <x-UI.text class="mb-2">
+            {{ __('Просто загрузите кадр, и сервис подскажет, из какого он аниме, когда он появляется в эпизоде и многое другое.') }}
           </x-UI.text>
+
           <x-UI.text>
-            {{ __('Сервис поддерживает как одиночные изображения, так и видео, а интерфейс адаптирован для комфортного использования на любых устройствах.') }}
+            {{ __('Сервис использует ') }}
+            <a href="https://trace.moe/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">API trace.moe</a>
+            {{ __('которое задействует нейросетевые алгоритмы для точного и быстрого поиска по миллионам кадров из аниме.') }}
           </x-UI.text>
+
         </div>
 
+        <div class="mb-10">
 
-        <div class="mb-7">
-          <x-UI.text class="mb-7">
-            {{ __('Anime Search идеально подходит для фанатов, блогеров и исследователей аниме-контента, помогая находить источник кадра и создавать тематический контент.') }}
+          <x-UI.subtitle class="text-gray-400 text-shadow-[none] mb-2">
+            {{ __('Функциональность') }}
+          </x-UI.subtitle>
+
+          <x-UI.text class="mb-2">
+            {{ __('Поддержка поиска по одиночным изображениям и видео.') }}
           </x-UI.text>
+
+          <x-UI.text class="mb-2">
+            {{ __('Адаптивный интерфейс для комфортного использования на любых устройствах.') }}
+          </x-UI.text>
+
           <x-UI.text>
-            {{ __('Совпадения с точностью ниже 90% скорее всего являются неверными. Окончательное решение — за вами: это может быть как совпадение, так и просто визуально схожий кадр.') }}
+            {{ __('Высокая точность распознавания с оценкой совпадения.') }}
           </x-UI.text>
+
         </div>
 
+        <div class="mb-10">
+
+          <x-UI.subtitle class="text-gray-400 text-shadow-[none] mb-2">
+            {{ __('Целевая аудитория') }}
+          </x-UI.subtitle>
+
+          <x-UI.text class="mb-2">
+            {{ __('Фанаты аниме, которые хотят быстро определить источник понравившегося кадра.') }}
+          </x-UI.text>
+
+          <x-UI.text class="mb-2">
+            {{ __('Блогеры, создающие тематический контент.') }}
+          </x-UI.text>
+
+          <x-UI.text>
+            {{ __('Исследователи и аналитики аниме-контента.') }}
+          </x-UI.text>
+
+        </div>
+
+        <div class="mb-10">
+
+          <x-UI.subtitle class="text-gray-400 text-shadow-[none] mb-2">
+            {{ __('Особенности') }}
+          </x-UI.subtitle>
+
+          <x-UI.text class="mb-2">
+            {{ __('Совпадения с точностью ниже 90% почти всегда выдают неправильный результат.') }}
+          </x-UI.text>
+
+        </div>
 
         <div>
-          <x-UI.text class="text-red-500 text-shadow-[0_0_8px_rgba(239,68,68,0.5)]">
-            {{ __('Обратите внимание: некоторые результаты поиска могут содержать материалы с ограничением 18+') }}
-            <br>
+
+          <x-UI.subtitle class="text-gray-400 text-shadow-[none] mb-2">
+            {{ __('Важное предупреждение') }}
+          </x-UI.subtitle>
+
+          <x-UI.text>
+            {{ __('Некоторые результаты поиска могут содержать материалы с ограничением 18+') }}
           </x-UI.text>
+
         </div>
+
 
       </div>
 

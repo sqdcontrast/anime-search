@@ -4,11 +4,11 @@
     <x-nav.list class="flex items-center justify-center gap-x-20 text-2xl font-medium">
 
       <x-nav.item :href="route('anime.form')" class="{{ activeLink('anime.form') }}">
-        Искать
+        Поиск
       </x-nav.item>
 
       <x-nav.item :href="route('pages.about')" class="{{ activeLink('pages.about') }}">
-        About
+        О проекте
       </x-nav.item>
 
     </x-nav.list>
